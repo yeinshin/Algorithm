@@ -35,10 +35,8 @@ def dijkstra(start):
 dijkstra(1)
 
 #1번 헛간으로부터 최단 거리가 가장 먼 헛간의 거리
-max_distance=0
-for i in distance:
-    if i!=INF:
-        max_distance=max(max_distance,i)
+max_distance=max(distance[1:])
+
 
 #숨어야 하는 헛간 중 가장 작은 헛간의 번호를 저장할 변수
 min_barn=n
@@ -49,5 +47,5 @@ for i in range(1,n+1):
         min_barn=min(min_barn,i)
         count+=1          
 
-print(min_barn,max_distance,count)
+print(min_barn,max_distance,count,end='\n\n')
 
