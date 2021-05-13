@@ -1,4 +1,5 @@
 #16953번-A->B / 다시 풀어보기 
+#힌트: 필요한 연산의 최솟값 -> 최단거리(BFS)를 활용하라
 
 # a,b = map(int,input().split())
 # count = 0
@@ -28,6 +29,7 @@ INF = int(1e9)
 a, b = map(int, input().split())
 
 ans = INF  # 정답
+
 q = deque()
 q.append((a, 0))  # 첫 위치 삽입
 
