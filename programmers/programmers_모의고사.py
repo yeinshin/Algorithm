@@ -1,5 +1,18 @@
 #프로그래머스-모의고사
 
+#[cycle]
+# >>> emp_pool = itertools.cycle(['김은경', '이명자', '이성진'])
+# >>> next(emp_pool)
+# '김은경'
+# >>> next(emp_pool)
+# '이명자'
+# >>> next(emp_pool)
+# '이성진'
+# >>> next(emp_pool)
+# '김은경'
+# >>> next(emp_pool)
+# '이명자'
+
 def solution(answers):
     answer = []
     
