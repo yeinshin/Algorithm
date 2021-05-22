@@ -10,7 +10,7 @@ M = int(input())
 if M != 0:
     B = list(input().split())
 #고장난 버튼이 없는 경우 빈 리스트로 선언
-else:
+else:           
     B = []
 
 #고장난 버튼을 제외한 버튼 리스트 생성
