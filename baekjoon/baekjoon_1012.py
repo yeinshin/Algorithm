@@ -43,6 +43,8 @@ for i in range(k):
 
 #------------------------------------------------------------------------------#
 #DFS 풀이
+import sys
+sys.setrecursionlimit(10000) #최대 재귀한도 늘려준다
 k = int(input())
 result = [0]*k
 for i in range(k):
