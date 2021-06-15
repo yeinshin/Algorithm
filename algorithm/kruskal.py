@@ -27,7 +27,7 @@ edges = []
 result = 0
 
 #부모 테이블상에서, 부모를 자기 자신으로 초기화
-for i in range(1,n+1):
+for i in range(1,v+1):
     parent[i]=i
 
 #모든 간선에 대한 정보를 입력받기
