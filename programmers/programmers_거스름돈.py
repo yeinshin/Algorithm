@@ -10,4 +10,4 @@ def solution(n, money):
             if i-m>=0:
                 dp[i]+=dp[i-m]
     
-    return dp[n]
+    return dp[n]%1000000007
