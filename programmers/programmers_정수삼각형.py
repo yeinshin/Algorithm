@@ -1,6 +1,7 @@
 #https://programmers.co.kr/learn/courses/30/lessons/43105
 #프로그래머스-정수삼각형
 def solution(triangle):
+    #dp = [[0]*i for i in range(1, len(triangle)+1)]
     dp = [[0]*(len(triangle[-1])) for _ in range(len(triangle))]
     dp[0][0] = triangle[0][0]
     for i in range(len(triangle)-1):
