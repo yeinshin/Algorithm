@@ -12,7 +12,6 @@ def convert(n, base):
             return convert(q, base) + arr[r]
 
 def solution(n, t, m, p):
-    answer = ''
     person = [[] for _ in range(m)]
     gamenum = 0
     idx = 0
