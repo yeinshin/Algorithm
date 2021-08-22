@@ -18,7 +18,6 @@ def solution(dartResult):
             if dartResult[i] == 'T':
                 calc = int(num)**3
             if (i<len(dartResult)-1 and dartResult[i+1].isdigit()) or i==len(dartResult)-1 :
-                # answer+=calc
                 answer.append(calc)
             num=''
             
@@ -29,12 +28,10 @@ def solution(dartResult):
                 answer[-1]*=2
             if (i<len(dartResult)-1 and dartResult[i+1].isdigit()) or i==len(dartResult)-1:
                 answer.append(calc)
-                calc = 0
                 
         elif dartResult[i] =='#':
             calc*=(-1)
             if (i<len(dartResult)-1 and dartResult[i+1].isdigit()) or i==len(dartResult)-1:
                 answer.append(calc)
-                calc = 0
     
     return sum(answer)
