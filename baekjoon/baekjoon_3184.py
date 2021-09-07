@@ -24,7 +24,6 @@ def bfs(x,y):
                 q.append((nx,ny))
 
 s,w = 0,0
-result = list()
 for i in range(n):
     for j in range(m):
         if ground[i][j]!='#' and not visited[i][j]:
@@ -32,6 +31,6 @@ for i in range(n):
             bfs(i,j)
             if sheep>wolf : s+=sheep
             else: w+=wolf
-            
+
 print(s,w)
 
