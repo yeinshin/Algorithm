@@ -17,4 +17,4 @@ for i in range(1,n+1):
         if graph[i][j]==1:
             cnt[i]+=1
             cnt[j]+=1
-print(cnt.cnt(n-1))
+print(cnt.count(n-1))
