@@ -1,7 +1,7 @@
 #https://www.acmicpc.net/problem/2252
 #2252번-줄 세우기
 from collections import deque
-#n:학생수, m:키를 비교한 횟수
+
 n,m = map(int,input().split())
 indegree = [0]*(n+1)
 graph = [[] for _ in range(n+1)]
