@@ -1,5 +1,5 @@
 #https://www.acmicpc.net/problem/10815
-#10815번-숫자 카드 2
+#10815번-숫자 카드
 n = int(input())
 card = sorted(map(int,input().split()))
 m = int(input())
