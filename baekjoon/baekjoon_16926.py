@@ -26,9 +26,7 @@ for _ in range(r):
             s_y = m - j - 1
             temp=array[s_x][s_y]
             array[s_x][s_y]=now
-            now=temp
+            now=temp 
 
 for i in range(n):
-    for j in range(n):
-        print(array[i][j],end=' ')
-    print()
+    print(*array[i],sep=' ')
