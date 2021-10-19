@@ -19,39 +19,28 @@ for _ in range(k):
     r,c = map(int,input().split())
     sticker = [list(map(int,input().split())) for _ in range(r)]
     check = False
-    for i in range(0,1) :
+    for i in range(n-r+1):
         for j in range(m-c+1):
-            if fit(i,j,r,c): 
+            if fit(i,j,r,c):
                 store(i,j,r,c)
                 check = True
                 break
-        if check:break
-    if check: continue #맨 윗줄에 채울 수 있다면 continue
+        if check: break
+    if check:continue
 
-    if not check: #맨 윗줄에 채울 수 없다면 밑줄부터 체크해주며 스티커 붙여주기
-        second_check = False
-        for i in range(1,n-r+1):
+    cnt = 1
+    while cnt<=3:
+        sticker=[k[::-1] for k in zip(*sticker)]
+        r,c = len(sticker),len(sticker[0])
+        for i in range(n-r+1):
             for j in range(m-c+1):
                 if fit(i,j,r,c):
                     store(i,j,r,c)
-                    second_check = True
+                    check = True
                     break
-            if second_check: break
-
-        if not second_check:
-            cnt = 1
-            while cnt<=3:
-                sticker=[k[::-1] for k in zip(*sticker)]
-                r,c = len(sticker),len(sticker[0])
-                for i in range(n-r+1):
-                    for j in range(m-c+1):
-                        if fit(i,j,r,c):
-                            store(i,j,r,c)
-                            second_check = True
-                            break
-                    if second_check: break
-                if second_check: break
-                else: cnt+=1
+            if check: break
+        if check: break
+        else: cnt+=1
 result = 0
 for i in range(n):
     result +=sum(notebook[i])
