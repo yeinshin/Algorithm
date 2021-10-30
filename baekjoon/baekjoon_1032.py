@@ -9,6 +9,6 @@ for j in range(len(s[0])):
         if s[i][j]!=s[i+1][j]: 
             check = True
             break
-    result+='?' if check else s[i] 
+    result+='?' if check else s[0][j] 
 print(result)
     
