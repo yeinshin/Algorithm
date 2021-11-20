@@ -13,13 +13,3 @@ for _ in range(n-1):
 visited = [False]*(n+1)
 visited[1]=True
 print(cnt)
-def dfs(now):
-
-    for i in graph[now]:
-        if not visited[i]:
-            print('i:',i)
-            visited[i]=True
-            dfs(i)
-    print('리프노드:',now)
-
-dfs(1)
