@@ -1,5 +1,5 @@
 #https://www.acmicpc.net/problem/1953
-#1953번-팀배분
+#1953번-팀배분(풀이참고)
 
 from collections import deque
 def bfs(x):
