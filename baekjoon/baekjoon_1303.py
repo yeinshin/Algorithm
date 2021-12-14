@@ -1,3 +1,4 @@
+#https://www.acmicpc.net/problem/1303
 #1303번-전쟁-전투
 
 from collections import deque
