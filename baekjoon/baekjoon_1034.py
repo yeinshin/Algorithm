@@ -1,3 +1,4 @@
+#https://www.acmicpc.net/problem/1034
 #1034번-램프/ 다시 풀어보기
 #1: 켜져있음
 #0: 꺼져있음 
