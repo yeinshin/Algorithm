@@ -1,3 +1,4 @@
+#https://www.acmicpc.net/problem/10974
 #10974번-모든 순열
 
 from itertools import permutations
