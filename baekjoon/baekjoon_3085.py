@@ -1,3 +1,4 @@
+#https://www.acmicpc.net/problem/3085
 #3085번-사탕 게임
 #NxN
 
