@@ -7,8 +7,9 @@ nums = list(map(int,input().split()))
 calc = list(map(int,input().split()))
 c = ['+','-','*','//']
 combi = []
-ans_min = int(1e9)
-ans_max = -int(1e9)
+INF = int(1e9)
+ans_min = INF
+ans_max = -INF
 
 def calculation():
     s = str(nums[0])
