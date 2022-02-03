@@ -2,10 +2,6 @@
 #15659번-연산자 끼워넣기 (3)
 #덧셈(+)의 개수, 뺄셈(-)의 개수, 곱셈(×)의 개수, 나눗셈(÷)의 개수
 
-from tkinter.messagebox import RETRY
-from turtle import back
-
-
 N = int(input())
 nums = list(map(int,input().split()))
 calc = list(map(int,input().split()))
