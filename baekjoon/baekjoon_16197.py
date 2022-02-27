@@ -15,12 +15,7 @@ board = [list(input()) for _ in range(n)]
 dx = [-1,1,0,0]
 dy = [0,0,-1,1]
 
-INF = int(1e9)
-min_click = INF
-
 def bfs(x1,y1,x2,y2,cnt):
-
-    global min_click
 
     q=deque()
     q.append((x1,y1,x2,y2,cnt))
