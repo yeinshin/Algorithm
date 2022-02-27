@@ -40,15 +40,9 @@ def bfs(x1,y1,x2,y2,cnt):
                     ny2=y2
 
                 q.append((nx1,ny1,nx2,ny2,cnt+1))
-            #둘다 떨어진게 아니라 coin1만 안떨어졌다면,
-            elif 0<=nx1<n and 0<=ny1<m:
+            #둘다 떨어지거나, 하나만 떨어졌다면
+            elif (0<=nx1<n and 0<=ny1<m) or (0<=nx2<n and 0<=ny2<m):
                 return cnt+1
-            #둘다 떨어진게 아니라 coin2만 안떨어졌다면,
-            elif 0<=nx2<n and 0<=ny2<m:
-                return cnt+1
-            #둘다 떨어진거면 무시한다
-            else:
-                continue
     
     return -1
 
