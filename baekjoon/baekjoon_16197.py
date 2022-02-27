@@ -7,9 +7,6 @@
 from collections import deque
 
 n,m = map(int,input().split())
-visited_1 = list()
-visited_2 = list()
-
 board = [list(input()) for _ in range(n)]
 
 dx = [-1,1,0,0]
