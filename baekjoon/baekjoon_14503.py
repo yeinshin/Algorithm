@@ -26,48 +26,18 @@ while 1:
         continue
 
     if d == 0:
-        nx, ny = x + dx[3], y + dy[3]
-        # 왼쪽 방향에 아직 청소하지 않은 공간이 존재한다면, 그 방향으로 회전한 다음 한 칸을 전진하고 1번부터 진행한다.
-        if arr[nx][ny] == 0:
-            cnt = 0
-            x = nx
-            y = ny
-        # 청소가 이미 되어있거나 벽인 경우
-        elif arr[nx][ny] == -1 or arr[nx][ny] == 1:
-            cnt += 1
-        d = 3
-
-    elif d == 1:
-        nx, ny = x + dx[0], y + dy[0]
-        # 왼쪽 방향에 아직 청소하지 않은 공간이 존재한다면, 그 방향으로 회전한 다음 한 칸을 전진하고 1번부터 진행한다.
-        if arr[nx][ny] == 0:
-            cnt = 0
-            x = nx
-            y = ny
-        # 청소가 이미 되어있거나 벽인 경우
-        elif arr[nx][ny] == -1 or arr[nx][ny] == 1:
-            cnt += 1
-        d = 0
-
-    elif d == 2:
-        nx, ny = x + dx[1], y + dy[1]
-        # 왼쪽 방향에 아직 청소하지 않은 공간이 존재한다면, 그 방향으로 회전한 다음 한 칸을 전진하고 1번부터 진행한다.
-        if arr[nx][ny] == 0:
-            cnt = 0
-            x = nx
-            y = ny
-        # 청소가 이미 되어있거나 벽인 경우
-        if arr[nx][ny] == -1 or arr[nx][ny] == 1:
-            cnt += 1
-        d = 1
+        idx = 3
     else:
-        nx, ny = x + dx[2], y + dy[2]
-        # 왼쪽 방향에 아직 청소하지 않은 공간이 존재한다면, 그 방향으로 회전한 다음 한 칸을 전진하고 1번부터 진행한다.
-        if arr[nx][ny] == 0:
+        idx = d-1
+
+    nx, ny = x + dx[idx], y + dy[idx]
+    # 왼쪽 방향에 아직 청소하지 않은 공간이 존재한다면, 그 방향으로 회전한 다음 한 칸을 전진하고 1번부터 진행한다.
+    if arr[nx][ny] == 0:
+        if cnt > 0:
             cnt = 0
-            x = nx
-            y = ny
-        # 청소가 이미 되어있거나 벽인 경우
-        elif arr[nx][ny] == -1 or arr[nx][ny] == 1:
-            cnt += 1
-        d = 2
+        x = nx
+        y = ny
+    # 청소가 이미 되어있거나 벽인 경우
+    elif arr[nx][ny] == -1 or arr[nx][ny] == 1:
+        cnt += 1
+    d = idx
