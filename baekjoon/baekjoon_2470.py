@@ -6,22 +6,18 @@ input = sys.stdin.readline
 n = int(input())
 arr = sorted(map(int, input().split()))
 
-ans = []
-check = sys.maxsize
+ans = [sys.maxsize,0,0]
 start, end = 0, n-1
 while start < end:
-    mix = abs(arr[start]+arr[end])
+    mix = arr[start]+arr[end]
     if mix == 0:
         print(arr[start], arr[end])
         break
-    ans.append((mix, arr[start], arr[end]))
-    if mix > check:
-        start += 1
-    else:
-        end -= 1
-    check = min(check, mix)
-
-
-else:
-    ans.sort()
-    print(ans[0][1], ans[0][2])
+    if ans[0]>abs(mix):
+        ans[0] = abs(mix)
+        ans[1] = arr[start]
+        ans[2] = arr[end]
+        
+    if mix > 0:end -= 1
+    else:start += 1
+else: print(ans[1], ans[2])
