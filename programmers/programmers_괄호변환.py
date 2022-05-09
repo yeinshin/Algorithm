@@ -51,7 +51,7 @@ def solution (p):
 
         for i in range(len(u)):
             if u[i] =='(':
-                u[i] ==')'
+                u[i] =')'
             else:
                 u[i] = '('
         answer += ''.join(u)
